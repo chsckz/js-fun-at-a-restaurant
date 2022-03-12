@@ -26,13 +26,21 @@ function decreasePrice(price) {
   return price * .9;
 }
 
+function createRecipe(title, ingredients, type){
+  return {
+    title,
+    ingredients,
+    type
+  }
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
 
 
