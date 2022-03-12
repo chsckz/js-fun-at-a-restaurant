@@ -10,11 +10,14 @@ function createMenuItem(foodToBeAdded) {
   }
 }
 
-let ingredients = []
-
-function addIngredients(ingredientsToBeAdded) {
-  ingredients.push(ingredientsToBeAdded)
+function addIngredients(ingredientsToBeAdded, ingredients) {
+  if (ingredients.includes(ingredientsToBeAdded)) {
+    return;
+  } else {
+    ingredients.push(ingredientsToBeAdded);
+  }
 }
+
 
 
 module.exports = {
