@@ -10,12 +10,17 @@ function createMenuItem(foodToBeAdded) {
   }
 }
 
+let ingredients = []
+
+function addIngredients(ingredientsToBeAdded) {
+  ingredients.push(ingredientsToBeAdded)
+}
 
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
-  // addIngredients,
+  addIngredients,
   // formatPrice,
   // decreasePrice,
   // createRecipe
