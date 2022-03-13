@@ -1,3 +1,5 @@
+const { nameMenuItem } = require("./meal");
+
 function takeOrder(order, deliveryOrders) {
   if (deliveryOrders.length < 3) {
     deliveryOrders.push(order);
@@ -17,12 +19,18 @@ function refundOrder(order, deliveryOrders) {
   deliveryOrders.splice(deleteIndex,1)
 } 
 
-
+function listItems(deliveryOrders) {
+  let orderName = [];
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    orderName.push(deliveryOrders[i].item);
+  };
+  return orderName.join(', ');
+}
 
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
