@@ -11,14 +11,18 @@ function createRestaurant(restaurantName) {
 }
 
 function addMenuItem(restaurantName, addDish) {
-  if (addDish.type == 'breakfast') {
-    restaurantName.menus.breakfast.push(addDish);
+  let breakfast = restaurantName.menus.breakfast;
+  let lunch = restaurantName.menus.lunch;
+  let dinner = restaurantName.menus.dinner;
+  if (addDish.type == 'breakfast' && !breakfast.includes(addDish)) {
+    breakfast.push(addDish);
   }
-  if (addDish.type == 'lunch') {
-    restaurantName.menus.lunch.push(addDish);
+  if (addDish.type == 'lunch' && !lunch.includes(addDish)) {
+    lunch.push(addDish);
   }
-  if (addDish.type == 'dinner') {
-    restaurantName.menus.dinner.push(addDish);
+  if (addDish.type == 'dinner' && !dinner.includes(addDish)) {
+    dinner.push(addDish);
+  }
 }
 
 
