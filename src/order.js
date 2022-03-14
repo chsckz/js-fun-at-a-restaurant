@@ -27,10 +27,18 @@ function listItems(deliveryOrders) {
   return orderName.join(', ');
 }
 
+function searchOrder(deliveryOrders, searchItem) {
+  let searchMenuList = [];
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    let temp = deliveryOrders[i].item;   
+    searchMenuList.push(temp);
+  }
+  return searchMenuList.includes(searchItem);
+}
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
